@@ -3,7 +3,7 @@
   "short_name": "SerralheriaPro",
   "description": "Sistema Profissional de Geração de Orçamentos de Serralheria e Estruturas Metálicas",
   "start_url": "./index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "#0f141c",
   "theme_color": "#f97316",
   "orientation": "portrait-primary",
