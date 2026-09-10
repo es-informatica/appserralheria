@@ -225,95 +225,50 @@
 
 <body class="bg-steel-950 text-slate-800 font-sans min-h-screen flex flex-col antialiased selection:bg-industrial-500 selection:text-white">
 
-  <header class="bg-steel-900/90 backdrop-blur border-b border-steel-800 sticky top-0 z-40 no-print">
+ <header class="bg-steel-900/90 backdrop-blur border-b border-steel-800 sticky top-0 z-40 no-print">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
 
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-
-      <div class="flex items-center gap-2 sm:gap-3">
-
-        <img src="./logo.png" 
-     alt="Logo Serralheria Pro" 
-     class="h-10 sm:h-12 w-auto object-contain rounded-lg border border-steel-700 shadow-md">
-        </div>
-        <div>
-
-          <h1 class="font-display font-extrabold text-lg sm:text-2xl tracking-tight text-white flex items-center gap-1.5 sm:gap-2">
-
-            PONTO DE
-
-            <span class="text-industrial-500">
-              AÇO
-            </span>
-
-          </h1>
-
-          <p class="text-[10px] sm:text-xs text-steel-400 font-medium hidden sm:block">
-            Móveis Industriais - Gerador de Orçamento
-          </p>
-
-        </div>
-
+    <!-- LADO ESQUERDO: LOGO + TÍTULO -->
+    <div class="flex items-center gap-2 sm:gap-3 h-full">
+      <img src="SEU_LOGO.png" 
+           alt="Logo Ponto de Aço" 
+           class="h-10 sm:h-11 w-auto object-contain rounded-lg border border-steel-700 shadow-md">
+      <div>
+        <h1 class="font-display font-extrabold text-lg sm:text-2xl tracking-tight text-white flex items-center gap-1.5 sm:gap-2 leading-none">
+          PONTO DE <span class="text-industrial-500">AÇO</span>
+        </h1>
+        <p class="text-[10px] sm:text-xs text-steel-400 font-medium hidden sm:block mt-0.5">
+          Móveis Industriais - Gerador de Orçamento
+        </p>
       </div>
-
-      <div class="flex items-center gap-1.5 sm:gap-3">
-
-        <button id="btn-install-pwa"
-          onclick="installPWA()"
-          class="hidden bg-gradient-to-r from-industrial-500 to-amber-600 hover:from-industrial-600 hover:to-amber-700 text-white text-xs sm:text-sm font-semibold px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg transition-all flex items-center gap-1.5 glow-effect">
-
-          <i class="fa-solid fa-download text-xs sm:text-sm"></i>
-
-          <span class="hidden xs:inline">
-            Instalar App
-          </span>
-
-        </button>
-
-        <button onclick="openPWAModal()"
-          class="bg-steel-800 hover:bg-steel-700 text-steel-200 p-2 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm border border-steel-700 transition flex items-center gap-1.5"
-          title="Configurações e Exportação App">
-
-          <i class="fa-solid fa-mobile-screen-button text-industrial-400"></i>
-
-          <span class="hidden md:inline">
-            Instalação & PWA
-          </span>
-
-        </button>
-
-        <div class="bg-steel-950 p-1 rounded-lg border border-steel-800 flex text-xs sm:text-sm">
-
-          <button id="nav-new"
-            onclick="switchTab('tab-new')"
-            class="px-2.5 sm:px-3 py-1.5 rounded-md font-semibold bg-industrial-500 text-white transition flex items-center gap-1">
-
-            <i class="fa-solid fa-plus"></i>
-
-            <span class="hidden sm:inline">
-              Novo Orçamento
-            </span>
-
-          </button>
-
-          <button id="nav-history"
-            onclick="switchTab('tab-history')"
-            class="px-2.5 sm:px-3 py-1.5 rounded-md font-medium text-steel-400 hover:text-white transition flex items-center gap-1">
-
-            <i class="fa-solid fa-history"></i>
-
-            <span class="hidden sm:inline">
-              Histórico
-            </span>
-
-          </button>
-
-        </div>
-
-      </div>
-
     </div>
 
-  </header>
+    <!-- LADO DIREITO: BOTEÕES DE NAVEGAÇÃO -->
+    <div class="flex items-center gap-1.5 sm:gap-3">
+      <button id="btn-install-pwa" onclick="installPWA()" class="hidden bg-gradient-to-r from-industrial-500 to-amber-600 hover:from-industrial-600 hover:to-amber-700 text-white text-xs sm:text-sm font-semibold px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-lg transition-all flex items-center gap-1.5 glow-effect">
+        <i class="fa-solid fa-download text-xs sm:text-sm"></i>
+        <span class="hidden xs:inline">Instalar App</span>
+      </button>
+
+      <button onclick="openPWAModal()" class="bg-steel-800 hover:bg-steel-700 text-steel-200 p-2 sm:px-3 sm:py-2 rounded-lg text-xs sm:text-sm border border-steel-700 transition flex items-center gap-1.5" title="Configurações e Exportação App">
+        <i class="fa-solid fa-mobile-screen-button text-industrial-400"></i>
+        <span class="hidden md:inline">Instalação & PWA</span>
+      </button>
+
+      <div class="bg-steel-950 p-1 rounded-lg border border-steel-800 flex text-xs sm:text-sm">
+        <button id="nav-new" onclick="switchTab('tab-new')" class="px-2.5 sm:px-3 py-1.5 rounded-md font-semibold bg-industrial-500 text-white transition flex items-center gap-1">
+          <i class="fa-solid fa-plus"></i>
+          <span class="hidden sm:inline">Novo Orçamento</span>
+        </button>
+        <button id="nav-history" onclick="switchTab('tab-history')" class="px-2.5 sm:px-3 py-1.5 rounded-md font-medium text-steel-400 hover:text-white transition flex items-center gap-1">
+          <i class="fa-solid fa-history"></i>
+          <span class="hidden sm:inline">Histórico</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</header>
 
   <main class="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-6 lg:p-8 no-print">
 
